@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI Fitness Trainer</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+margin-top:50px;
+}
+
+.card{
+width:600px;
+margin:auto;
+padding:20px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🏋️ AI Fitness Trainer</h1>
+
+<form
+action="/analyze"
+method="POST"
+enctype="multipart/form-data">
+
+<input
+type="file"
+name="image"
+required>
+
+<br><br>
+
+<button type="submit">
+Analyze Squat
+</button>
+
+</form>
+
+{% if result %}
+
+<h2>{{ result }}</h2>
+
+<h3>Knee Angle: {{ angle }}</h3>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
